@@ -223,6 +223,10 @@ main {
   {
     width: 100%;
   }
+
+  .container .profile-data .events ul li {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 425px) {
