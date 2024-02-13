@@ -37,9 +37,9 @@ const screen = {
 
         user.events.forEach(event => {
             if(event.type === 'PushEvent'){
-                eventItens += `<li><h3>${event.repo.name}:</h3> <p>- ${event.payload.commits[0].message}</p></li>`
+                eventItens += `<li><h3>${event.repo.name}:</h3> <p>- ${event.payload.commits[0].message ?? 'Não possui mensagem 😥'}</p></li>`
             } else if (event.type === 'CreateEvent'){
-                eventItens += `<li><h3>${event.repo.name}:</h3> <p>- ${event.payload.description}</p></li>`
+                eventItens += `<li><h3>${event.repo.name}:</h3> <p>- ${event.payload.description ?? 'Não possui descrição 😥'}</p></li>`
             }
         })
 
